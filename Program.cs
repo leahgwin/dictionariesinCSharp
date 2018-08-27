@@ -58,7 +58,6 @@ namespace dictionaries
                 if (stocksPurchased.ContainsKey(stocks[purchase.ticker]))
                 {
                     // If it does, update the total valuation
-
                     stocksPurchased[stocks[purchase.ticker]] += purchase.price * purchase.shares;
                 }
                 else
@@ -66,10 +65,10 @@ namespace dictionaries
                     // If not, add the new key and set its value
                     stocksPurchased.Add(stocks[purchase.ticker], purchase.price * purchase.shares);
                 }
-                foreach (KeyValuePair<string, double> item in stocksPurchased)
-                {
-                    Console.WriteLine($"{item.Key}: {item.Value.ToString("C")}");
-                }
+            }
+            foreach (KeyValuePair<string, double> item in stocksPurchased)
+            {
+                Console.WriteLine($"{item.Key}: {item.Value.ToString("C")}");
             }
 
         }
