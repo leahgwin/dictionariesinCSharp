@@ -1,2 +1,1 @@
 # dictionariesinCSharp
-# dictionaries
